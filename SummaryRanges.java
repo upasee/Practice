@@ -10,14 +10,12 @@ public class SummaryRanges {
         if (arr == null || arr.length == 0)
             return result;
         int prev = arr[0];
-        int flag = 1;
         int first = arr[0];
         for (int i = 1; i < arr.length; i++) {
             if (prev == (arr[i] - 1)) {
                 prev = arr[i];
                 continue;
             } else {
-                flag = 1;
                 if (first != prev)
                     result.add(first + "->" + prev);
                 else
